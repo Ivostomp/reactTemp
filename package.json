@@ -1,0 +1,49 @@
+{
+    "name":  "amaze",
+    "version":  "2.0.0",
+    "description":  "React template, you should probably change this description",
+    "main":  "index.js",
+    "scripts":  {
+                    "start":  "webpack-dev-server --port 8080 --open",
+                    "build":  "webpack",
+                    "cginstall":  "npm install \u0026\u0026 npm run git:submodule \u0026\u0026 npm run install:webpack \u0026\u0026 npm run copy:webpack",
+                    "git:submodule":  "git submodule update -i -r",
+                    "install:webpack":  "cd webpack \u0026\u0026 npm install",
+                    "copy:webpack":  "cpx \"webpack/copyus/*\" \".\""
+                },
+    "author":  "Ivo",
+    "license":  "ISC",
+    "devDependencies":  {
+                            "@types/lodash":  "^4.14.45",
+                            "@types/q":  "0.0.32",
+                            "@types/react":  "^0.14.55",
+                            "@types/react-dom":  "^0.14.20",
+                            "cpx":  "^1.5.0",
+                            "css-loader":  "^0.26.1",
+                            "file-loader":  "^0.9.0",
+                            "html-webpack-plugin":  "^2.26.0",
+                            "json-loader":  "^0.5.4",
+                            "less":  "^2.7.2",
+                            "less-loader":  "^2.2.3",
+                            "source-map-loader":  "^0.1.5",
+                            "style-loader":  "^0.13.1",
+                            "ts-loader":  "^1.3.3",
+                            "tslint":  "^4.3.1",
+                            "tslint-loader":  "^3.3.0",
+                            "typescript":  "^2.1.4",
+                            "webpack":  "^1.14.0",
+                            "webpack-dev-server":  "^1.16.2"
+                        },
+    "dependencies":  {
+                         "cg-style":  "^1.0.1",
+                         "lodash":  "^4.17.4",
+                         "q":  "^1.4.1",
+                         "react":  "^15.4.1",
+                         "react-dom":  "^15.4.1"
+                     },
+    "-vs-binding":  {
+                        "BeforeBuild":  [
+                                            "build"
+                                        ]
+                    }
+}
